@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URLs</title>
+</head>
+<body>
+Range ₹[{{range_from}} - {{range_to}}]
+<table>
+    <tr>
+        <th>URLS</th>
+    </tr>
+    {% for url in furl_for_multi_page %}
+    <tr>
+        <td >
+            <a href={{url}}>{{url}}</a>
+        </td>
+        <td>
+            Flipkart
+        </td>
+    </tr>
+    {% endfor %}
+
+    {% for url in aurl_for_multi_page %}
+    <tr>
+        <td >
+            <a href={{url}}>{{url}}</a>
+        </td>
+        <td>
+            Amazon
+        </td>
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
